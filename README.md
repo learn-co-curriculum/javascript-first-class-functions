@@ -22,7 +22,7 @@ weights, go for a swim, or run an extra 5 miles.
 
 In programming-speak, we could write out a function for every day (follow along!):
 
-``` javascript
+```js
 function Monday() {
   console.log('Go for a five-mile run')
   console.log('Pump iron')
@@ -53,7 +53,7 @@ But that's pretty tedious. And we already know that functions are supposed to he
 
 What if we pull all of our five-mile runs into their own function?
 
-``` javascript
+```js
 function runFiveMiles() {
   console.log('Go for a five-mile run')
 }
@@ -61,7 +61,7 @@ function runFiveMiles() {
 
 Okay, that cuts down _slightly_ on how much code we need to write. What if we do the same for lifting weights and swimming?
 
-``` javascript
+```js
 function liftWeights() {
   console.log('Pump iron')
 }
@@ -74,7 +74,7 @@ function swimFortyLaps() {
 Okay, we've cut down a little bit more: `Monday()` could now look like
 
 
-``` javascript
+```js
 function Monday() {
   runFiveMiles()
   liftWeights()
@@ -83,7 +83,7 @@ function Monday() {
 
 which, sure, is a tiny bit shorter than before. But again, we know that every day, our routine includes two activities; and the first activity is always a run. What if ... hm, let's try this:
 
-``` javascript
+```js
 function exerciseRoutine(postRunActivity) {
   runFiveMiles()
   postRunActivity()
@@ -92,7 +92,7 @@ function exerciseRoutine(postRunActivity) {
 
 Notice that, in `exerciseRoutine()`, `postRunActivity` is actually a _function_ — we call it it after we call `runFiveMiles()`. Now let's try to change `Monday()` to
 
-``` javascript
+```js
 function Monday() {
   exerciseRoutine(liftWeights)
 }
@@ -112,7 +112,7 @@ What if, though, we want to have a one-off day of pilates in our exercise routin
 
 We can pass what's called an _anonymous function_ to `exerciseRoutine()`. We can either use the full function syntax:
 
-``` javascript
+```js
 exerciseRoutine(function() {
   console.log('Stretch! Work that core!')
 })
@@ -123,7 +123,7 @@ exerciseRoutine(function() {
 
 We can use an arrow function to make this even more concise:
 
-``` javascript
+```js
 exerciseRoutine(() => {
   console.log('Stretch! Work that core!')
 })
@@ -139,7 +139,7 @@ For example, let's say our morning routine involves drinking a cup of coffee, ex
 
 Let's translate this to a function:
 
-``` javascript
+```js
 function morningRoutine(exercise) {
   var breakfast = null
 
@@ -164,13 +164,13 @@ function morningRoutine(exercise) {
 
 Now when we call `morningRoutine()`, we'll get a function back:
 
-``` javascript
+```js
 var afterExercise = morningRoutine(liftWeights)
 ```
 
 And we can call that function later:
 
-``` javascript
+```js
 afterExercise()
 ```
 
