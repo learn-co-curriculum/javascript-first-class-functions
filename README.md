@@ -59,7 +59,7 @@ function runFiveMiles() {
 }
 ```
 
-Okay, that cuts down _slightly_ on how much code we need to write. What if we do the same for lifting weights and swimming?
+Okay, that cuts down _slightly_ on how much code we need to write. Let's do the same thing for lifting weights and swimming:
 
 ```js
 function liftWeights() {
@@ -71,7 +71,7 @@ function swimFortyLaps() {
 }
 ```
 
-Okay, we've cut down a little bit more: `Monday()` could now look like
+Awesome! We've cut down a little bit more: `Monday()` could now look like
 
 
 ```js
@@ -81,7 +81,9 @@ function Monday() {
 }
 ```
 
-which, sure, is a tiny bit shorter than before. But again, we know that every day, our routine includes two activities; and the first activity is always a run. What if ... hm, let's try this:
+While it is a tiny bit shorter than before, there is definitely still room for improvement. We know that every day,
+our routine includes two activities. We also know that the first activity is always a run. That means that the
+second activity can be variable. What if we created a function that took the second activity as a parameter?
 
 ```js
 function exerciseRoutine(postRunActivity) {
@@ -90,7 +92,8 @@ function exerciseRoutine(postRunActivity) {
 }
 ```
 
-Notice that, in `exerciseRoutine()`, `postRunActivity` is actually a _function_ — we call it it after we call `runFiveMiles()`. Now let's try to change `Monday()` to
+Notice that, in `exerciseRoutine()`, the `postRunActivity` parameter is actually a _function_ — we call it it after
+we call `runFiveMiles()`. Now let's try to use this new function we created in our `Monday()` function:
 
 ```js
 function Monday() {
@@ -98,13 +101,17 @@ function Monday() {
 }
 ```
 
-Notice that we aren't _calling_ `liftWeights` when we pass it as an argument to `exerciseRoutine()`; we omit the parentheses when it's just an argument. But inside `exerciseRoutine()`, the function will be called.
+Notice that we aren't _calling_ `liftWeights`. When we want to pass a function as a value, we pass it by _reference_. We
+do this by omitting the parentheses. We're not running the function at this point. It's up to `exerciseRoutine()` to
+call the function when it is needed.
 
 If we call `Monday()`, we'll see that we run five miles, and then we lift weights — awesome!
 
-Functions that can be used as arguments to other functions are known as **first-class functions**. They're super useful, as you can see — they even help us exercise in the mornings!
+Functions in JavaScript are **first-class functions**. Among other things, this means that we can pass them as values to
+other functions, just like we did above. They're super useful, as you can see — they even help us exercise in the mornings!
 
-Note: you'll often see functions used in this way referred to as "callbacks." That's because they're _called back_ after the body of the function they're passed to completes!
+Note: you'll often see functions used in this way referred to as "callbacks." That's because they're _called back_ after
+the body of the function they're passed to completes!
 
 ## Inline functions
 
