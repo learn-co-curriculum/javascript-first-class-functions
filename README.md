@@ -102,7 +102,7 @@ If we call `Monday()`, we'll see that we run five miles, and then we lift weight
 
 Functions that can be used as arguments to other functions are known as **first-class functions**. They're super useful, as you can see — they even help us exercise in the mornings!
 
-Note: you'll often see functions used in this way referred to as "callbacks." That's because they're _called back_ after the body of the function their passed to completes!
+Note: you'll often see functions used in this way referred to as "callbacks." That's because they're _called back_ after the body of the function they're passed to completes!
 
 ## Inline functions
 
