@@ -14,9 +14,11 @@ First-Class Functions
 
 ## Introduction
 
-Sometimes in life, we need to take a known first step, but we want to be able to adjust a subsequent step in a process.
+Sometimes in life, we need to take a first step. Since life isn't scripted like a reality TV show, anything can happen
+after that initial step. We need to be able to adjust accordingly.
 
-Imagine an exercise routine: every morning, we run 5 miles. But then afterwards, depending on the day, we might lift weights, go for a swim, or run an extra 5 miles.
+Imagine an exercise routine: every morning, we run 5 miles. But afterwards — depending on the day — we might lift
+weights, go for a swim, or run an extra 5 miles.
 
 In programming-speak, we could write out a function for every day (follow along!):
 
