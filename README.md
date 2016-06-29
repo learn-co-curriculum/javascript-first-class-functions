@@ -115,9 +115,11 @@ the body of the function they're passed to completes!
 
 ## Inline functions
 
-What if, though, we want to have a one-off day of pilates in our exercise routines?
+What if, though, we want to have a one-off day of Pilates in our exercise routine? Keep in mind that our
+`exerciseRoutine()` function requires a function as its first (and only) parameter. However, that function doesn't have
+to be defined beforehand! We can pass what's called an _anonymous function_ to `exerciseRoutine()`.
 
-We can pass what's called an _anonymous function_ to `exerciseRoutine()`. We can either use the full function syntax:
+To start with, let's use the full function syntax we've come to know and love:
 
 ```js
 exerciseRoutine(function() {
@@ -128,15 +130,19 @@ exerciseRoutine(function() {
 // "Stretch! Work that core!"
 ```
 
-We can use an arrow function to make this even more concise:
+We can rewrite this to be more concise by using an arrow function:
 
 ```js
 exerciseRoutine(() => {
   console.log('Stretch! Work that core!')
 })
+
+// Or even shorter:
+exerciseRoutine(() => console.log('Stretch! Work that core!'))
 ```
 
-Notice how neither of these functions has a name — we can't refer to it to call it elsewhere, we just pass it in as an argument to `exerciseRoutine()`. Functions that don't have names are, for obvious reasons, known as **anonymous functions**.
+Notice how neither of these functions have a name — we can't refer to it elsewhere, we just pass it in as an argument
+to `exerciseRoutine()`. Functions that don't have names are, for obvious reasons, known as **anonymous functions**.
 
 ## Returning functions
 
