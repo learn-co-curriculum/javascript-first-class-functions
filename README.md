@@ -146,9 +146,12 @@ to `exerciseRoutine()`. Functions that don't have names are, for obvious reasons
 
 ## Returning functions
 
-Functions can also return other functions. This is useful when we want to package up a function and its environment (including any variables that can be declared in its closure — remember those!?), but we don't want to call it _just yet_.
+Functions can also return other functions. This is useful when we want to package up a function and its environment, but
+when we don't want to call it _just yet_.
 
-For example, let's say our morning routine involves drinking a cup of coffee, exercising immediately, and then at some point later (depending on how we feel), eating breakfast — and breakfast depends on what kind of exercise we're doing.
+For example, let's say our morning routine involves drinking a cup of coffee, exercising immediately, and then at some
+point later (depending on how we feel), eating breakfast. What we'll have for breakfast depends on what kind of exercise
+we're doing.
 
 Let's translate this to a function:
 
@@ -189,11 +192,13 @@ afterExercise()
 
 ![first-class functions in action](https://curriculum-content.s3.amazonaws.com/skills-based-js/first-class_functions_example.png)
 
-If you haven't been following along, it's vitally important that you go back and do so. First-class functions are one of JavaScript's most powerful features, but it takes some practice for using them to sink in.
+If you haven't been following along, it's vitally important that you go back and do so. First-class functions are one
+of JavaScript's most powerful features, but it takes some practice for them to sink in.
 
 ## Your turn
 
-You'll also, of course, get some practice from this lab! Remember, run the tests, read the errors, write some code in `index.js`, run the tests, read the output — repeat until finished.
+You'll also, of course, get some practice from this lab! Remember, run the tests, read the errors, write some code in
+`index.js`, run the tests, read the output — repeat until finished.
 
 ## Resources
 
